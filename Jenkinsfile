@@ -3,7 +3,7 @@ pipeline {
     stages {
        stage('build'){
        steps {
-                sh 'echo "restarting all" '  
+                sh 'echo "Hello World"'  
                 sh '''
                     echo "Multi line work too"
                     ls -alh   
