@@ -14,8 +14,8 @@ pipeline {
 
        stage('Upload to AWS') {
        	 steps {
-        	withAWS(region:'us-east-1',credentials:'aws-static') {
-            s3Upload(file:'index.html', bucket:'mys3static1')
+        	withAWS(credentials:'aws-static') {
+            		s3Upload(file:'index.html', bucket:'mys3static1')
         	  }
               }	 
        	 }
