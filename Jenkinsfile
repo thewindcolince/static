@@ -14,7 +14,7 @@ pipeline {
 
        stage('Upload to AWS') {
        	 steps {
-        	withAWS(region:'US West (Oregon) us-west-2', credentials:'AKIASZBJSPLU2IS6KMVE') {
+        	withAWS(region:'US West (Oregon) us-west-2', credentials:'aws-static') {
             s3Upload(file:'index.html', bucket:'mys3static')
         	  }
               }	 
